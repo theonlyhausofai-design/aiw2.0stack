@@ -152,6 +152,7 @@ function UnlockDialog({
   const [email, setEmail] = useState("")
   const [status, setStatus] = useState<"idle" | "loading" | "error" | "done">("idle")
   const [error, setError] = useState("")
+  const [fileUrl, setFileUrl] = useState("")
 
   async function submit(e: React.FormEvent) {
     e.preventDefault()
@@ -174,6 +175,7 @@ function UnlockDialog({
         setStatus("error")
         return
       }
+      setFileUrl(data.url)
       setStatus("done")
       window.open(data.url, "_blank", "noopener,noreferrer")
     } catch {
@@ -212,7 +214,7 @@ function UnlockDialog({
               blocked, use the button below.
             </p>
             <a
-              href={resource.viewUrl}
+              href={fileUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 inline-flex items-center gap-1 rounded-lg bg-accent px-4 py-2 text-sm font-medium text-white transition-opacity hover:opacity-90"

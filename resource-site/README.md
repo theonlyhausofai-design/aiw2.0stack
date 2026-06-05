@@ -34,19 +34,47 @@ npm run dev      # http://localhost:3007
 Works out of the box on the baked snapshot. Add `.env.local` (see
 `.env.example`) to enable live sync and Supabase lead storage.
 
+## Private file delivery
+
+Files are **never shared publicly**. On unlock, the site issues a short-lived
+signed link to `/api/download/[id]`, which fetches the file with the owner's
+Drive credential and streams it to the visitor (Google Docs export to PDF).
+The Drive files stay "viewable by owner only"; the link expires and cannot be
+shared or guessed. Without a credential the route returns a clear 503.
+
+### Getting the Google credential (OAuth refresh token, ~5 min)
+
+The easiest single credential is an OAuth refresh token for
+`theonlyhausofai@gmail.com` — it can read its own files plus everything shared
+in from `thewebsitedept@gmail.com`.
+
+1. **Google Cloud Console** → create a project (or reuse one) → enable the
+   **Google Drive API**.
+2. **APIs & Services → Credentials → Create Credentials → OAuth client ID** →
+   type **Web application**. Add redirect URI:
+   `https://developers.google.com/oauthplayground`. Save the **Client ID** and
+   **Client secret**.
+3. Open the **[OAuth 2.0 Playground](https://developers.google.com/oauthplayground)**
+   → gear icon → check **Use your own OAuth credentials** → paste the client id
+   and secret.
+4. Step 1: enter scope `https://www.googleapis.com/auth/drive.readonly` →
+   **Authorize APIs** → sign in as **theonlyhausofai@gmail.com** → allow.
+5. Step 2: **Exchange authorization code for tokens** → copy the
+   **refresh token**.
+6. Set in Vercel: `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`,
+   `GOOGLE_REFRESH_TOKEN`, and `UNLOCK_SECRET` (any long random string).
+
 ## Going live
 
-1. **Drive sync** — create a Google Cloud service account, enable the Drive
-   API, and either (a) share the curated folders with the service account, or
-   (b) use domain-wide delegation with `GOOGLE_IMPERSONATE_EMAIL`. Set
-   `GOOGLE_SERVICE_ACCOUNT_JSON`. Because the `thewebsitedept` files are shared
-   into `theonlyhausofai@gmail.com`, reading through that account covers
-   everything — keep those shares in place.
-2. **Leads** — create a Supabase project, run
-   `supabase/migrations/0001_leads.sql`, then set `SUPABASE_URL` and
-   `SUPABASE_SERVICE_ROLE_KEY`.
-3. **Deploy** — `vercel` (or import the repo in Vercel with root
-   `resource-site/`). Add the same env vars in the Vercel dashboard.
+1. **Delivery + live sync** — add the Google OAuth env vars above (or a service
+   account via `GOOGLE_SERVICE_ACCOUNT_JSON`). One credential powers both
+   private downloads and live catalog refresh.
+2. **Leads** — Supabase project + `supabase/migrations/0001_leads.sql`, then
+   set `SUPABASE_URL` and `SUPABASE_ANON_KEY` (publishable/anon key works via
+   the insert-only RLS policy) or `SUPABASE_SERVICE_ROLE_KEY`.
+3. **Secret** — set `UNLOCK_SECRET` so download tokens are unforgeable.
+4. **Deploy** — import the repo in Vercel with root `resource-site/` and add the
+   env vars in the dashboard.
 
 ## Editing the library
 

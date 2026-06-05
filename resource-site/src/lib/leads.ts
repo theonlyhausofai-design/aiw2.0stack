@@ -18,16 +18,22 @@ export interface LeadInput {
   source?: string
 }
 
+function supabaseUrl(): string | undefined {
+  return process.env.SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL
+}
+
 function supabaseKey(): string | undefined {
   return (
     process.env.SUPABASE_SERVICE_ROLE_KEY ||
     process.env.SUPABASE_ANON_KEY ||
-    process.env.SUPABASE_PUBLISHABLE_KEY
+    process.env.SUPABASE_PUBLISHABLE_KEY ||
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ||
+    process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
   )
 }
 
 function supabaseConfigured(): boolean {
-  return Boolean(process.env.SUPABASE_URL && supabaseKey())
+  return Boolean(supabaseUrl() && supabaseKey())
 }
 
 export async function recordLead(input: LeadInput): Promise<void> {
@@ -41,11 +47,9 @@ export async function recordLead(input: LeadInput): Promise<void> {
   }
 
   try {
-    const supabase = createClient(
-      process.env.SUPABASE_URL!,
-      supabaseKey()!,
-      { auth: { persistSession: false } },
-    )
+    const supabase = createClient(supabaseUrl()!, supabaseKey()!, {
+      auth: { persistSession: false },
+    })
     const { error } = await supabase.from("leads").insert({
       email: input.email.toLowerCase(),
       resource_id: input.resourceId,

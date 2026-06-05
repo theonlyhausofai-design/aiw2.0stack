@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server"
 import { findResource } from "@/lib/catalog"
 import { recordLead } from "@/lib/leads"
+import { issueToken } from "@/lib/tokens"
 import { isValidEmail } from "@/lib/utils"
 
 export const runtime = "nodejs"
@@ -34,5 +35,11 @@ export async function POST(req: Request) {
     resourceTitle: resource.title,
   })
 
-  return NextResponse.json({ url: resource.viewUrl, title: resource.title })
+  // Hand back a short-lived, signed link to our own gated delivery route so
+  // the file is served privately on the visitor's behalf (the raw Drive link
+  // is never exposed and the files stay viewable by the owner only).
+  const token = issueToken(resource.id)
+  const url = `/api/download/${resource.id}?t=${encodeURIComponent(token)}`
+
+  return NextResponse.json({ url, title: resource.title })
 }

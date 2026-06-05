@@ -122,3 +122,60 @@ export async function fetchLiveFiles(): Promise<DriveFile[]> {
 
   return [...seen.values()]
 }
+
+/** Google-native types and what we export them to for delivery. */
+const GOOGLE_EXPORT: Record<string, { mime: string; ext: string }> = {
+  "application/vnd.google-apps.document": { mime: "application/pdf", ext: "pdf" },
+  "application/vnd.google-apps.spreadsheet": { mime: "application/pdf", ext: "pdf" },
+  "application/vnd.google-apps.presentation": { mime: "application/pdf", ext: "pdf" },
+  "application/vnd.google-apps.drawing": { mime: "application/pdf", ext: "pdf" },
+}
+
+export interface DownloadedFile {
+  data: Buffer
+  contentType: string
+  filename: string
+}
+
+/**
+ * Fetches a single file's bytes for private delivery. Google-native docs are
+ * exported to PDF; everything else is streamed as-is. Requires Drive creds.
+ */
+export async function downloadFile(id: string): Promise<DownloadedFile> {
+  const drive = getClient()
+
+  const meta = await drive.files.get({
+    fileId: id,
+    fields: "name, mimeType",
+    supportsAllDrives: true,
+  })
+  const mimeType = meta.data.mimeType ?? "application/octet-stream"
+  const name = meta.data.name ?? id
+
+  const exporter = GOOGLE_EXPORT[mimeType]
+  if (exporter) {
+    const res = await drive.files.export(
+      { fileId: id, mimeType: exporter.mime },
+      { responseType: "arraybuffer" },
+    )
+    return {
+      data: Buffer.from(res.data as ArrayBuffer),
+      contentType: exporter.mime,
+      filename: `${stripExt(name)}.${exporter.ext}`,
+    }
+  }
+
+  const res = await drive.files.get(
+    { fileId: id, alt: "media", supportsAllDrives: true },
+    { responseType: "arraybuffer" },
+  )
+  return {
+    data: Buffer.from(res.data as ArrayBuffer),
+    contentType: mimeType,
+    filename: name,
+  }
+}
+
+function stripExt(name: string): string {
+  return name.replace(/\.[a-z0-9]{1,5}$/i, "")
+}
