@@ -1,7 +1,15 @@
 {
   "studentName": "Juanika Freeman",
   "currentModule": "m1_discovery",
-  "candidateNiches": [],
+  "candidateNiches": [
+    "Med spas",
+    "Dental / dental implant practices",
+    "Wellness and day spas",
+    "Aesthetic and cosmetic clinics",
+    "Fashion / boutique ecommerce",
+    "Home services (HVAC, plumbing, electrical, roofing)",
+    "General local service SMBs (non-technical owners)"
+  ],
   "finalistNiches": [],
   "chosenNiche": null,
   "interviewNotes": {
@@ -10,7 +18,11 @@
     "niche_signals_so_far": ["HVAC", "plumbing", "electrical", "roofing", "service-based businesses generally", "healthcare/IT systems (BJC)"],
     "certs": "Security+, CCP (Certified Cyber/Cloud Professional), in addition to MS Info Science w/ network security minor.",
     "real_clients": "ONLY 2 real outside clients: Sylvia Mollie (women's ready-to-wear fashion brand) and The Well VB (wellness spa), plus her own site. Triangle Implant Center and Carter & Sons HVAC were AI-generated examples, REMOVED from agency-brand.json. Agency went side->main ~5 years ago (2021).",
-    "INTEGRITY_FLAG": "Real proof = fashion + wellness spa. Agency niche/proposal copy provisionally set to HVAC/home-services where she has NO clients. Real delivered niches so far are fashion/ecommerce and wellness/spa. Resolve true beachhead in /pick-niche; current HVAC lean is aspirational not proven."
+    "INTEGRITY_FLAG": "Real proof = fashion + wellness spa. Agency niche/proposal copy provisionally set to HVAC/home-services where she has NO clients. Real delivered niches so far are fashion/ecommerce and wellness/spa. Resolve true beachhead in /pick-niche; current HVAC lean is aspirational not proven.",
+    "section4_network": "Warm network = med spa owners. Reach = small non-technical local business owners.",
+    "section5_money": "Years of paid website work for small businesses (proven). Automation is the new paid layer. Real clients: Sylvia Mollie (fashion ecommerce), The Well VB (wellness spa).",
+    "section6_filters": "Will work with: med spas, dental. Refuse: none. Atlanta GA, local/clinic businesses.",
+    "section7_state": "Time 80 hrs/wk. Capital $200. Skills: design 5, sales 1, SEO 3, content 3. 12-mo target: 5 clients @ $10k/month recurring."
   },
   "lastUpdated": "2026-06-05T05:00:00Z"
 }
