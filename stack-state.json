@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "module": "not_started",
+  "module": "setup_complete",
   "niche": null,
   "studentName": null,
   "gates": {
-    "setup.complete": false,
+    "setup.complete": true,
     "agency.brandLocked": false,
     "m1.profileLocked": false,
     "m2a.scoresLocked": false,
@@ -24,16 +24,33 @@
   },
   "credentials": {
     "anthropic": true,
-    "apify": false,
-    "supabase": false,
-    "vercel": false,
-    "assemblyAi": false,
-    "github": false
+    "apify": true,
+    "supabase": true,
+    "vercel": true,
+    "assemblyAi": true,
+    "github": true,
+    "gemini": true
+  },
+  "credentialVerification": {
+    "anthropic": "verified",
+    "github": "verified",
+    "apify": "unverified_host_blocked",
+    "supabase": "unverified_host_blocked",
+    "vercel": "unverified_host_blocked",
+    "assemblyAi": "unverified_host_blocked",
+    "gemini": "untested_by_design"
   },
   "deployments": {
     "factory": null,
     "engine": null
   },
   "factoryRuns": [],
-  "history": []
+  "history": [
+    {
+      "timestamp": "2026-06-05T00:00:00Z",
+      "command": "/setup",
+      "outcome": "complete",
+      "note": "All 9 credentials collected to .env.local. Anthropic and GitHub verified live (HTTP 200). Apify, Supabase, Vercel, AssemblyAI saved but unverified because the web container's network policy blocks those hosts. Gemini saved, untested by design. Student chose collect-keys/skip-live-tests path. Re-verify the four unverified services from a networked machine before /research, /deploy-engine, and any Vercel deploy."
+    }
+  ]
 }
