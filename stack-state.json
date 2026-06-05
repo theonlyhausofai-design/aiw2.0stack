@@ -5,7 +5,7 @@
   "studentName": null,
   "gates": {
     "setup.complete": true,
-    "agency.brandLocked": false,
+    "agency.brandLocked": true,
     "m1.profileLocked": false,
     "m2a.scoresLocked": false,
     "m2b.researchComplete": false,
@@ -51,6 +51,12 @@
       "command": "/setup",
       "outcome": "complete",
       "note": "All 9 credentials collected to .env.local. Anthropic and GitHub verified live (HTTP 200). Apify, Supabase, Vercel, AssemblyAI saved but unverified because the web container's network policy blocks those hosts. Gemini saved, untested by design. Student chose collect-keys/skip-live-tests path. Re-verify the four unverified services from a networked machine before /research, /deploy-engine, and any Vercel deploy."
+    },
+    {
+      "timestamp": "2026-06-05T02:45:00Z",
+      "command": "/setup-agency",
+      "outcome": "complete",
+      "note": "Wrote website-factory/clients/_agency/agency-brand.json (gitignored). Validated: no surviving __REQUIRED__ sentinels. Agency: The Website Dept, founder Juanika Freeman. 4 Google reviews, 5 client builds, pricing/palette/AI-stack/timeline/guarantee set. Niche vocab set provisionally to HVAC pending /pick-niche. Outstanding TODOs: all asset files (portrait, logo, guarantee seal, 4 review avatars, 5 build screenshots), proof video, blueprint PDF. agency-brand.json is gitignored so it lives only in this ephemeral container until backed up."
     }
   ]
 }
