@@ -4,6 +4,10 @@
   "candidateNiches": [],
   "finalistNiches": [],
   "chosenNiche": null,
-  "interviewNotes": {},
+  "interviewNotes": {
+    "section1_work_history": "10+ yr cloud/AI architect. Agency OneTechGirl LLC -> The Website Dept (2014-present), product = 'Jobs Booked System' (AI + automation + high-converting web) for service businesses: HVAC, plumbing, electrical, roofing. AI Solution Architect at PureLogics (2023-present). Linux System Engineer SelekIT (2021-23). System QA Analyst BJC HealthCare (2021, healthcare systems). Global IT Ops Graphic Packaging (2020-21). Windows 10 deployment lead Bayer (2019). Prior: Mac/Windows engineer, Java dev, IT support, sysadmin at Cox Automotive, HPE, FAA, Home Depot, Recall, Rollins, Apex, RTI, BCBS. Atlanta GA based.",
+    "education": "MS Information Science (Network Security minor) NCCU; BS Computer Information Systems Saint Augustine's; Graphic Design Cert NYIAD; Business Mgmt & Marketing (incomplete) Strayer.",
+    "niche_signals_so_far": ["HVAC", "plumbing", "electrical", "roofing", "service-based businesses generally", "healthcare/IT systems (BJC)"]
+  },
   "lastUpdated": "2026-06-05T05:00:00Z"
 }
