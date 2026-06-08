@@ -1,0 +1,52 @@
+{
+  "niche_label": "Spas (med spa + day spa)",
+  "primary_terms": [
+    "med spa",
+    "medical spa",
+    "day spa"
+  ],
+  "country": "US",
+  "target_cities": [
+    "Atlanta, GA",
+    "Marietta, GA",
+    "Alpharetta, GA"
+  ],
+  "recipe1_agency_queries": [
+    "med spa website design agency",
+    "med spa marketing agency",
+    "best med spa website examples"
+  ],
+  "recipe2_customer_subreddits": [
+    "r/Botox",
+    "r/PlasticSurgery",
+    "r/SkincareAddiction",
+    "r/30PlusSkinCare"
+  ],
+  "recipe2_reddit_searches": [
+    "med spa experience",
+    "botox first time",
+    "filler results",
+    "is med spa worth it",
+    "best med spa"
+  ],
+  "recipe2_subreddit_note": "These are med-spa customer subs. Day spa has thin Reddit presence; lean on Google Maps reviews of day spas for that side.",
+  "recipe3_fb_ad_seed_terms": [
+    "med spa",
+    "botox special",
+    "medical spa",
+    "filler",
+    "skin tightening"
+  ],
+  "recipe6_seo_keywords": [
+    "med spa near me",
+    "botox near me",
+    "medical spa {city}",
+    "best med spa {city}",
+    "lip filler {city}"
+  ],
+  "recipe6_gbp_searches": [
+    "med spa near me",
+    "medical spa {city}"
+  ],
+  "trustpilot": false
+}

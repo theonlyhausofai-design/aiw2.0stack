@@ -1,0 +1,52 @@
+{
+  "niche_label": "Dental / implant practices",
+  "primary_terms": [
+    "dental implants",
+    "full arch dental implants",
+    "all on 4 dental implants"
+  ],
+  "country": "US",
+  "target_cities": [
+    "Atlanta, GA",
+    "Marietta, GA",
+    "Alpharetta, GA"
+  ],
+  "recipe1_agency_queries": [
+    "dental implant website design agency",
+    "dental marketing agency",
+    "best dental website examples"
+  ],
+  "recipe2_customer_subreddits": [
+    "r/askdentists",
+    "r/Dentures",
+    "r/Dental",
+    "r/DentalImplants"
+  ],
+  "recipe2_reddit_searches": [
+    "dental implants cost",
+    "all on 4",
+    "full arch implants",
+    "implant vs denture",
+    "is it worth getting implants"
+  ],
+  "recipe2_subreddit_note": "r/Dentistry is practitioner-heavy; prioritize r/askdentists and r/Dentures for patient voice.",
+  "recipe3_fb_ad_seed_terms": [
+    "dental implants",
+    "all on 4",
+    "full arch",
+    "implant dentist",
+    "free implant consultation"
+  ],
+  "recipe6_seo_keywords": [
+    "dental implants near me",
+    "all on 4 dental implants {city}",
+    "dental implant cost",
+    "best implant dentist {city}",
+    "full arch dental implants {city}"
+  ],
+  "recipe6_gbp_searches": [
+    "dental implants near me",
+    "implant dentist {city}"
+  ],
+  "trustpilot": false
+}

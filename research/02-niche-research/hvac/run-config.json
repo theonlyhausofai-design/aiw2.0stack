@@ -1,0 +1,53 @@
+{
+  "niche_label": "Home services / HVAC",
+  "primary_terms": [
+    "HVAC",
+    "AC repair",
+    "furnace replacement",
+    "heating and air"
+  ],
+  "country": "US",
+  "target_cities": [
+    "Atlanta, GA",
+    "Marietta, GA",
+    "Alpharetta, GA"
+  ],
+  "recipe1_agency_queries": [
+    "HVAC website design agency",
+    "HVAC marketing agency",
+    "best HVAC website examples"
+  ],
+  "recipe2_customer_subreddits": [
+    "r/HomeImprovement",
+    "r/homeowners",
+    "r/HVAC",
+    "r/Home"
+  ],
+  "recipe2_reddit_searches": [
+    "AC not working",
+    "furnace replacement cost",
+    "HVAC quote",
+    "how to choose HVAC company",
+    "new AC unit cost"
+  ],
+  "recipe2_subreddit_note": "r/HVAC is technician-heavy; mine r/HomeImprovement and r/homeowners for homeowner (end-customer) voice.",
+  "recipe3_fb_ad_seed_terms": [
+    "AC repair",
+    "HVAC service",
+    "furnace replacement",
+    "new AC unit",
+    "AC tune up special"
+  ],
+  "recipe6_seo_keywords": [
+    "AC repair near me",
+    "HVAC repair {city}",
+    "furnace replacement {city}",
+    "HVAC company {city}",
+    "air conditioning repair {city}"
+  ],
+  "recipe6_gbp_searches": [
+    "HVAC near me",
+    "AC repair {city}"
+  ],
+  "trustpilot": false
+}

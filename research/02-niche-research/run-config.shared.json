@@ -1,0 +1,40 @@
+{
+  "_README": "Pre-filled run configuration for Module 2B /research. Each niche's actor inputs are parameterized here so /research is turnkey in a networked session. {city} placeholders expand across target_cities. Edit target_cities if you want a different market than Atlanta metro. Apify cost target: $1-2 per niche, halt at $5. Log every run to logs/apify-runs.jsonl.",
+  "country": "US",
+  "default_target_cities": [
+    "Atlanta, GA",
+    "Marietta, GA",
+    "Alpharetta, GA"
+  ],
+  "maps_reviews_per_place": 50,
+  "reddit_max_items": 200,
+  "fb_ads_max_items": 100,
+  "actor_map": {
+    "recipe1_agencies": [
+      "apify/google-search-scraper",
+      "apify/website-content-crawler"
+    ],
+    "recipe2_customer_voice": [
+      "apify/google-maps-reviews",
+      "apify/reddit-scraper-lite",
+      "apify/trustpilot-scraper (optional)"
+    ],
+    "recipe3_copy": [
+      "apify/facebook-ads-library-scraper",
+      "apify/website-content-crawler"
+    ],
+    "recipe4_cro": [
+      "apify/website-content-crawler (+desktop/mobile screenshots)"
+    ],
+    "recipe5_trust": [
+      "no actor, synthesis of recipes 1+4"
+    ],
+    "recipe6_seo": [
+      "apify/google-search-scraper",
+      "apify/google-maps-scraper"
+    ],
+    "recipe7_money_math": [
+      "no actor, synthesis of recipes 1+2"
+    ]
+  }
+}
