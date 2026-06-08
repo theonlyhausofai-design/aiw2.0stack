@@ -69,6 +69,12 @@
       "command": "/discovery",
       "outcome": "complete",
       "note": "Profile approved and locked. Wrote research/01-student-profile.md. Juanika Freeman: 10+ yr cloud/AI architect, design 5 / sales 1 / SEO 3 / content 3, 80 hrs/wk, $200 capital, target 5 clients @ $10k/mo. 7 candidate niches surfaced; med spa is the warmest real signal, HVAC is aspirational. m1.profileLocked=true. Next: /score-niches."
+    },
+    {
+      "timestamp": "2026-06-08T00:00:00Z",
+      "command": "/setup",
+      "outcome": "reverify_failed",
+      "note": "Re-ran connectivity tests after student attempted a network policy change. Same container as June 5 (.env.local and agency-brand.json persisted), so the old egress allowlist was still in effect. Anthropic and GitHub still HTTP 200. Apify and Vercel returned HTTP 403 'Host not in allowlist'; Supabase and AssemblyAI HTTP 403. credentialVerification unchanged. A network policy change only applies to a session started after it is saved. Student must save a Custom egress policy allowing api.apify.com, api.vercel.com, akbtkjakbjwnbtyddgnc.supabase.co (or *.supabase.co), and api.assemblyai.com, then start a fresh session and re-run /setup."
     }
   ]
 }
