@@ -1,0 +1,158 @@
+{
+  "templateName": "hvac",
+  "totalPages": 14,
+  "pages": [
+    {
+      "slug": "/",
+      "title": "Home",
+      "tier": "root",
+      "silo": null,
+      "description": "Primary landing page. Hero, trust strip, services overview, process steps, reviews, CTA.",
+      "priority": 1,
+      "requiredSections": ["hero", "trust-strip", "services-grid", "process-steps", "reviews-carousel", "cta-banner"]
+    },
+    {
+      "slug": "/about",
+      "title": "About Us",
+      "tier": "core",
+      "silo": null,
+      "description": "Company story, team photos, years in business, certifications, values.",
+      "priority": 2,
+      "requiredSections": ["company-story", "team-grid", "certifications", "cta-banner"]
+    },
+    {
+      "slug": "/contact",
+      "title": "Contact Us",
+      "tier": "core",
+      "silo": null,
+      "description": "Contact form, phone number, address, service area map, hours.",
+      "priority": 2,
+      "requiredSections": ["contact-form", "location-map", "hours", "phone-cta"]
+    },
+    {
+      "slug": "/reviews",
+      "title": "Reviews",
+      "tier": "core",
+      "silo": null,
+      "description": "Customer reviews and testimonials. Google review integration if available.",
+      "priority": 2,
+      "requiredSections": ["review-aggregate", "review-list", "cta-banner"]
+    },
+    {
+      "slug": "/faq",
+      "title": "FAQ",
+      "tier": "core",
+      "silo": null,
+      "description": "Frequently asked questions about HVAC service, pricing, scheduling.",
+      "priority": 3,
+      "requiredSections": ["faq-accordion", "cta-banner"]
+    },
+    {
+      "slug": "/ac-repair",
+      "title": "AC Repair",
+      "tier": "pillar",
+      "silo": "cooling",
+      "description": "Air conditioning repair services. Common problems, pricing transparency, emergency availability.",
+      "priority": 1,
+      "requiredSections": ["service-hero", "problem-list", "process-steps", "pricing-note", "reviews-filtered", "cta-banner"]
+    },
+    {
+      "slug": "/heating-repair",
+      "title": "Heating Repair",
+      "tier": "pillar",
+      "silo": "heating",
+      "description": "Furnace and heating system repair. Winter emergency focus.",
+      "priority": 1,
+      "requiredSections": ["service-hero", "problem-list", "process-steps", "pricing-note", "reviews-filtered", "cta-banner"]
+    },
+    {
+      "slug": "/ac-installation",
+      "title": "AC Installation",
+      "tier": "pillar",
+      "silo": "cooling",
+      "description": "New air conditioning system installation. Brands carried, sizing, financing.",
+      "priority": 1,
+      "requiredSections": ["service-hero", "brands-grid", "process-steps", "financing-section", "reviews-filtered", "cta-banner"]
+    },
+    {
+      "slug": "/heating-installation",
+      "title": "Heating Installation",
+      "tier": "pillar",
+      "silo": "heating",
+      "description": "New furnace and heating system installation. Efficiency ratings, brand options.",
+      "priority": 1,
+      "requiredSections": ["service-hero", "brands-grid", "process-steps", "financing-section", "reviews-filtered", "cta-banner"]
+    },
+    {
+      "slug": "/maintenance",
+      "title": "Maintenance Plans",
+      "tier": "pillar",
+      "silo": "maintenance",
+      "description": "Preventive maintenance and tune-up plans. Seasonal check-ups, plan tiers.",
+      "priority": 2,
+      "requiredSections": ["service-hero", "plan-comparison", "benefits-list", "cta-banner"]
+    },
+    {
+      "slug": "/indoor-air-quality",
+      "title": "Indoor Air Quality",
+      "tier": "pillar",
+      "silo": "iaq",
+      "description": "Air purifiers, humidifiers, filtration upgrades, duct cleaning.",
+      "priority": 3,
+      "requiredSections": ["service-hero", "product-grid", "benefits-list", "cta-banner"]
+    },
+    {
+      "slug": "/service-areas",
+      "title": "Service Areas",
+      "tier": "pillar",
+      "silo": "local",
+      "description": "List of cities and zip codes served. Map. One child page per major city if needed.",
+      "priority": 2,
+      "requiredSections": ["area-map", "city-list", "cta-banner"]
+    },
+    {
+      "slug": "/financing",
+      "title": "Financing",
+      "tier": "core",
+      "silo": null,
+      "description": "Financing options, monthly payment calculator, partner lender info.",
+      "priority": 2,
+      "requiredSections": ["financing-hero", "plan-options", "apply-cta"]
+    },
+    {
+      "slug": "/emergency",
+      "title": "Emergency HVAC Service",
+      "tier": "pillar",
+      "silo": "emergency",
+      "description": "24/7 emergency service page. Click-to-call prominence. Fast response guarantee.",
+      "priority": 1,
+      "requiredSections": ["emergency-hero", "phone-cta-large", "response-guarantee", "common-emergencies", "cta-banner"]
+    }
+  ],
+  "silos": {
+    "cooling": {
+      "label": "Cooling Services",
+      "pages": ["/ac-repair", "/ac-installation"]
+    },
+    "heating": {
+      "label": "Heating Services",
+      "pages": ["/heating-repair", "/heating-installation"]
+    },
+    "maintenance": {
+      "label": "Maintenance",
+      "pages": ["/maintenance"]
+    },
+    "iaq": {
+      "label": "Indoor Air Quality",
+      "pages": ["/indoor-air-quality"]
+    },
+    "local": {
+      "label": "Service Areas",
+      "pages": ["/service-areas"]
+    },
+    "emergency": {
+      "label": "Emergency",
+      "pages": ["/emergency"]
+    }
+  }
+}

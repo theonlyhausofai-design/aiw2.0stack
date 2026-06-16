@@ -1,0 +1,152 @@
+{
+  "badges": [
+    {
+      "name": "NATE Certified",
+      "slug": "nate",
+      "issuer": "North American Technician Excellence",
+      "issuerUrl": "https://www.natex.org",
+      "tier": 1,
+      "description": "Industry gold standard for HVAC technician competency.",
+      "file": "trust-badges/nate.svg"
+    },
+    {
+      "name": "BBB A+ Accredited",
+      "slug": "bbb",
+      "issuer": "Better Business Bureau",
+      "issuerUrl": "https://www.bbb.org",
+      "tier": 1,
+      "description": "Top rating from the Better Business Bureau.",
+      "file": "trust-badges/bbb-a-plus.svg"
+    },
+    {
+      "name": "EPA 608 Certified",
+      "slug": "epa-608",
+      "issuer": "U.S. Environmental Protection Agency",
+      "issuerUrl": "https://www.epa.gov/section608",
+      "tier": 1,
+      "description": "Required federal certification for handling refrigerants.",
+      "file": "trust-badges/epa-608.svg"
+    },
+    {
+      "name": "Carrier Factory Authorized Dealer",
+      "slug": "carrier",
+      "issuer": "Carrier Global Corporation",
+      "issuerUrl": "https://www.carrier.com",
+      "tier": 2,
+      "description": "Authorized dealer for Carrier heating and cooling systems.",
+      "file": "trust-badges/carrier.svg"
+    },
+    {
+      "name": "Trane Comfort Specialist",
+      "slug": "trane",
+      "issuer": "Trane Technologies",
+      "issuerUrl": "https://www.trane.com",
+      "tier": 2,
+      "description": "Recognized dealer for Trane residential HVAC products.",
+      "file": "trust-badges/trane.svg"
+    },
+    {
+      "name": "Lennox Premier Dealer",
+      "slug": "lennox",
+      "issuer": "Lennox International",
+      "issuerUrl": "https://www.lennox.com",
+      "tier": 2,
+      "description": "Top-tier dealer status with Lennox residential products.",
+      "file": "trust-badges/lennox.svg"
+    },
+    {
+      "name": "ENERGY STAR Partner",
+      "slug": "energy-star",
+      "issuer": "U.S. Environmental Protection Agency / Department of Energy",
+      "issuerUrl": "https://www.energystar.gov",
+      "tier": 2,
+      "description": "Certified partner for energy-efficient product installation.",
+      "file": "trust-badges/energy-star.svg"
+    }
+  ],
+  "socialProof": {
+    "googleReviews": {
+      "label": "[X]+ Five-Star Google Reviews",
+      "minThreshold": 50,
+      "displayFormat": "star-count",
+      "tier": 1
+    },
+    "yearsInBusiness": {
+      "label": "[X]+ Years Serving [City]",
+      "minThreshold": 5,
+      "tier": 1
+    },
+    "homesServed": {
+      "label": "[X]+ Homes Served",
+      "minThreshold": 1000,
+      "tier": 2
+    }
+  },
+  "tierRanking": {
+    "1": "Above the fold. Always visible on every page.",
+    "2": "Below hero or in trust section. Visible on homepage and service pages.",
+    "3": "Footer or dedicated trust page only."
+  },
+  "signals": [
+    {
+      "name": "Google Reviews",
+      "priority": 1,
+      "display": "Aggregate rating + count above fold in trust strip and hero",
+      "issuerUrl": "https://google.com",
+      "badgeFile": "google-reviews.svg"
+    },
+    {
+      "name": "NATE Certification",
+      "priority": 2,
+      "display": "Badge in trust strip + about page + footer",
+      "issuerUrl": "https://natex.org",
+      "badgeFile": "natex-certified.png"
+    },
+    {
+      "name": "BBB A+ Accredited",
+      "priority": 3,
+      "display": "Badge in trust strip",
+      "issuerUrl": "https://bbb.org",
+      "badgeFile": "bbb-accredited.svg"
+    },
+    {
+      "name": "EPA Section 608 Certified",
+      "priority": 4,
+      "display": "Mentioned in credentials section",
+      "issuerUrl": "https://epa.gov",
+      "badgeFile": "epa-certified.svg"
+    },
+    {
+      "name": "Carrier Factory Authorized Dealer",
+      "priority": 5,
+      "display": "Badge in trust strip if client holds",
+      "issuerUrl": "https://carrier.com",
+      "badgeFile": "carrier-dealer.svg"
+    },
+    {
+      "name": "Trane Comfort Specialist",
+      "priority": 6,
+      "display": "Badge in trust strip if client holds",
+      "issuerUrl": "https://trane.com",
+      "badgeFile": "trane-specialist.svg"
+    },
+    {
+      "name": "Lennox Premier Dealer",
+      "priority": 7,
+      "display": "Badge in trust strip if client holds",
+      "issuerUrl": "https://lennox.com",
+      "badgeFile": "lennox-dealer.svg"
+    },
+    {
+      "name": "ENERGY STAR Partner",
+      "priority": 8,
+      "display": "Badge on installation pages",
+      "issuerUrl": "https://energystar.gov",
+      "badgeFile": "energy-star.svg"
+    }
+  ],
+  "trustStripCount": 4,
+  "minimumReviewCount": 50,
+  "minimumRating": 4.5,
+  "nicheNote": "Trust strip shows top 4 signals the client holds. Google Reviews always slot 1. Slots 2-4 are highest-priority badges the client actually has. Do not display badges the client does not hold."
+}

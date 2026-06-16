@@ -1,0 +1,80 @@
+{
+  "categories": [
+    {
+      "id": "hero",
+      "label": "Hero Images",
+      "description": "Primary hero banner images for homepage and service pages.",
+      "minShots": 3,
+      "maxShots": 5,
+      "subjects": ["technician at work", "comfortable family at home", "technician explaining to homeowner"],
+      "lighting": "Warm natural light, 5500K-6000K. Side or three-quarter front.",
+      "resolution": "2400x1200 minimum, 2:1 aspect ratio preferred.",
+      "format": "WebP with JPEG fallback.",
+      "notes": "Must leave space on one side for text overlay. No text baked into the image."
+    },
+    {
+      "id": "team",
+      "label": "Team Photos",
+      "description": "Individual and group photos of technicians and office staff.",
+      "minShots": 4,
+      "maxShots": 10,
+      "subjects": ["individual headshots in uniform", "group team photo by truck or shop", "candid at work"],
+      "lighting": "Even, natural. Outdoors preferred for group shots. Neutral background for headshots.",
+      "resolution": "800x800 minimum for headshots, 1600x900 for group.",
+      "format": "WebP with JPEG fallback.",
+      "notes": "Clean uniforms. Name badges visible when possible. Real employees, not stock."
+    },
+    {
+      "id": "equipment",
+      "label": "Equipment and Systems",
+      "description": "Photos of HVAC units, installations, and components.",
+      "minShots": 4,
+      "maxShots": 8,
+      "subjects": ["outdoor AC condenser", "indoor furnace or air handler", "thermostat on wall", "ductwork", "mini split unit"],
+      "lighting": "Clean and well-lit. No dark basements. Show equipment in best light.",
+      "resolution": "1200x800 minimum.",
+      "format": "WebP with JPEG fallback.",
+      "notes": "Equipment should look clean and professional. Include both residential and light commercial if applicable."
+    },
+    {
+      "id": "completed-work",
+      "label": "Completed Work",
+      "description": "Before-and-after or finished installation photos.",
+      "minShots": 4,
+      "maxShots": 12,
+      "subjects": ["new AC install exterior", "new furnace install", "thermostat upgrade", "ductwork repair"],
+      "lighting": "Bright, natural. Show the quality of the finished work.",
+      "resolution": "1200x800 minimum.",
+      "format": "WebP with JPEG fallback.",
+      "notes": "Pair before/after when possible. Clean work area in the after photo."
+    },
+    {
+      "id": "trucks",
+      "label": "Service Vehicles",
+      "description": "Company trucks and vans with visible branding.",
+      "minShots": 2,
+      "maxShots": 4,
+      "subjects": ["branded truck side view", "truck at job site", "fleet lineup"],
+      "lighting": "Daylight, clean background. No clutter behind vehicles.",
+      "resolution": "1600x900 minimum.",
+      "format": "WebP with JPEG fallback.",
+      "notes": "Trucks should be clean. Branding and phone number visible. Reinforces legitimacy."
+    },
+    {
+      "id": "office",
+      "label": "Office and Showroom",
+      "description": "Storefront, reception area, or showroom if applicable.",
+      "minShots": 1,
+      "maxShots": 3,
+      "subjects": ["front of building with signage", "reception desk", "showroom display"],
+      "lighting": "Bright interior or clean exterior daylight.",
+      "resolution": "1200x800 minimum.",
+      "format": "WebP with JPEG fallback.",
+      "notes": "Optional category. Only include if the client has a physical location they want shown."
+    }
+  ],
+  "totalMinimum": 18,
+  "totalMaximum": 42,
+  "deliveryFormat": "All images delivered as optimized WebP with JPEG fallback. Originals retained at full resolution.",
+  "namingConvention": "{category}-{sequence}-{descriptor}.{ext}"
+}

@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jobs Booked System | The Website Department</title>
+  <meta name="description" content="Stop losing HVAC jobs to competitors with worse service. The Jobs Booked System turns your online presence into a 24/7 booking machine.">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #0a0a0a;
+      --bg-card: #141414;
+      --bg-card-hover: #1a1a1a;
+      --border: #222;
+      --border-accent: #333;
+      --text: #f5f5f5;
+      --text-muted: #888;
+      --text-secondary: #aaa;
+      --accent: #ff6b2b;
+      --accent-glow: rgba(255, 107, 43, 0.15);
+      --accent-hover: #ff8550;
+      --green: #22c55e;
+      --green-glow: rgba(34, 197, 94, 0.12);
+      --red: #ef4444;
+      --red-muted: rgba(239, 68, 68, 0.1);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(10, 10, 10, 0.85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 0;
+    }
+    nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-weight: 800;
+      font-size: 18px;
+      letter-spacing: -0.5px;
+    }
+    .logo span { color: var(--accent); }
+    .nav-cta {
+      background: var(--accent);
+      color: #fff;
+      padding: 10px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      transition: background 0.2s;
+    }
+    .nav-cta:hover { background: var(--accent-hover); }
+
+    /* HERO */
+    .hero {
+      padding: 160px 0 100px;
+      text-align: center;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: var(--accent-glow);
+      border: 1px solid rgba(255, 107, 43, 0.3);
+      color: var(--accent);
+      padding: 6px 16px;
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 32px;
+      letter-spacing: 0.5px;
+    }
+    .hero h1 {
+      font-size: clamp(36px, 5.5vw, 64px);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -2px;
+      max-width: 850px;
+      margin: 0 auto 24px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--accent);
+    }
+    .hero p {
+      font-size: clamp(16px, 2vw, 20px);
+      color: var(--text-secondary);
+      max-width: 640px;
+      margin: 0 auto 40px;
+      line-height: 1.7;
+    }
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: #fff;
+      padding: 16px 36px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 17px;
+      transition: all 0.2s;
+      box-shadow: 0 0 40px rgba(255, 107, 43, 0.2);
+    }
+    .hero-cta:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 0 60px rgba(255, 107, 43, 0.3);
+    }
+    .hero-stat {
+      margin-top: 48px;
+      font-size: 14px;
+      color: var(--text-muted);
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* SECTIONS */
+    section { padding: 100px 0; }
+    .section-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -1.5px;
+      margin-bottom: 24px;
+    }
+    .section-subtitle {
+      font-size: 18px;
+      color: var(--text-secondary);
+      max-width: 600px;
+      line-height: 1.7;
+    }
+    .section-divider {
+      width: 60px;
+      height: 3px;
+      background: var(--accent);
+      border-radius: 2px;
+      margin: 100px auto;
+    }
+
+    /* PAIN CARDS */
+    .pain-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .pain-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 36px;
+      transition: border-color 0.3s;
+    }
+    .pain-card:hover { border-color: var(--red); }
+    .pain-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--red-muted);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+    .pain-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+    .pain-card p {
+      color: var(--text-secondary);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    /* AGITATE */
+    .agitate {
+      background: linear-gradient(180deg, rgba(239, 68, 68, 0.04) 0%, transparent 100%);
+      border-top: 1px solid rgba(239, 68, 68, 0.1);
+      border-bottom: 1px solid rgba(239, 68, 68, 0.1);
+      text-align: center;
+    }
+    .agitate .big-number {
+      font-size: clamp(48px, 8vw, 80px);
+      font-weight: 900;
+      color: var(--red);
+      letter-spacing: -3px;
+      margin: 32px 0 16px;
+    }
+    .agitate .big-label {
+      font-size: 18px;
+      color: var(--text-secondary);
+      margin-bottom: 32px;
+    }
+    .agitate .body-text {
+      font-size: 17px;
+      color: var(--text-secondary);
+      max-width: 640px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    /* SOLUTION */
+    .solution {
+      text-align: center;
+      background: linear-gradient(180deg, transparent 0%, var(--accent-glow) 50%, transparent 100%);
+    }
+
+    /* VALUE STACK */
+    .stack-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 48px;
+    }
+    .stack-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 40px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 32px;
+      align-items: start;
+      transition: all 0.3s;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    .stack-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .stack-card:hover {
+      border-color: var(--accent);
+      background: var(--bg-card-hover);
+    }
+    .stack-card.bonus {
+      border-style: dashed;
+      border-color: var(--green);
+    }
+    .stack-card.bonus:hover {
+      border-color: var(--green);
+      background: rgba(34, 197, 94, 0.04);
+    }
+    .stack-label {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    .stack-card.bonus .stack-label { color: var(--green); }
+    .stack-card h3 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+    .stack-card p {
+      color: var(--text-secondary);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+    .stack-value {
+      text-align: right;
+      white-space: nowrap;
+    }
+    .stack-value .amount {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+    .stack-value .label {
+      font-size: 12px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    @media (max-width: 640px) {
+      .stack-card {
+        grid-template-columns: 1fr;
+        padding: 28px;
+      }
+      .stack-value { text-align: left; }
+    }
+
+    /* PRICING */
+    .pricing {
+      text-align: center;
+      padding: 120px 0;
+    }
+    .pricing-box {
+      max-width: 600px;
+      margin: 48px auto 0;
+      background: var(--bg-card);
+      border: 2px solid var(--accent);
+      border-radius: 20px;
+      padding: 48px;
+      box-shadow: 0 0 80px rgba(255, 107, 43, 0.08);
+    }
+    .pricing-total {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 24px;
+    }
+    .pricing-total .label {
+      font-size: 16px;
+      color: var(--text-muted);
+    }
+    .pricing-total .amount {
+      font-size: 24px;
+      font-weight: 700;
+      text-decoration: line-through;
+      color: var(--text-muted);
+    }
+    .pricing-actual {
+      margin-bottom: 8px;
+    }
+    .pricing-actual .label {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+    }
+    .pricing-actual .price {
+      font-size: clamp(48px, 8vw, 64px);
+      font-weight: 900;
+      letter-spacing: -3px;
+    }
+    .pricing-actual .price span { color: var(--accent); }
+    .pricing-monthly {
+      font-size: 15px;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+    }
+    .pricing-bottom-line {
+      background: var(--accent-glow);
+      border: 1px solid rgba(255, 107, 43, 0.2);
+      border-radius: 12px;
+      padding: 16px;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    /* GUARANTEE */
+    .guarantee {
+      text-align: center;
+      background: var(--green-glow);
+      border-top: 1px solid rgba(34, 197, 94, 0.15);
+      border-bottom: 1px solid rgba(34, 197, 94, 0.15);
+    }
+    .guarantee-box {
+      max-width: 680px;
+      margin: 0 auto;
+      background: var(--bg-card);
+      border: 2px solid var(--green);
+      border-radius: 20px;
+      padding: 48px;
+    }
+    .guarantee-icon {
+      width: 64px;
+      height: 64px;
+      background: rgba(34, 197, 94, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      margin: 0 auto 24px;
+    }
+    .guarantee-box h2 {
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+    }
+    .guarantee-box p {
+      color: var(--text-secondary);
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+    .guarantee-box .highlight {
+      color: var(--green);
+      font-weight: 700;
+    }
+
+    /* COMPARISON */
+    .comparison-table {
+      width: 100%;
+      margin-top: 48px;
+      border-collapse: collapse;
+    }
+    .comparison-table th,
+    .comparison-table td {
+      padding: 16px 20px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+      font-size: 15px;
+    }
+    .comparison-table th {
+      font-weight: 700;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-muted);
+    }
+    .comparison-table th:last-child { color: var(--accent); }
+    .comparison-table td:first-child {
+      font-weight: 600;
+      color: var(--text);
+    }
+    .comparison-table td:nth-child(2) { color: var(--text-muted); }
+    .comparison-table td:last-child {
+      color: var(--green);
+      font-weight: 500;
+    }
+    @media (max-width: 640px) {
+      .comparison-table { font-size: 13px; }
+      .comparison-table th, .comparison-table td { padding: 12px 10px; }
+    }
+
+    /* WHO IT'S FOR */
+    .for-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 48px;
+    }
+    @media (max-width: 640px) { .for-grid { grid-template-columns: 1fr; } }
+    .for-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 36px;
+    }
+    .for-box h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .for-box.yes h3 { color: var(--green); }
+    .for-box.no h3 { color: var(--red); }
+    .for-box ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .for-box li {
+      font-size: 15px;
+      color: var(--text-secondary);
+      padding-left: 28px;
+      position: relative;
+      line-height: 1.5;
+    }
+    .for-box.yes li::before {
+      content: '\2713';
+      position: absolute;
+      left: 0;
+      color: var(--green);
+      font-weight: 700;
+    }
+    .for-box.no li::before {
+      content: '\2717';
+      position: absolute;
+      left: 0;
+      color: var(--red);
+      font-weight: 700;
+    }
+
+    /* CTA SECTION */
+    .final-cta {
+      text-align: center;
+      padding: 120px 0;
+      background: linear-gradient(180deg, transparent 0%, var(--accent-glow) 100%);
+    }
+    .final-cta .section-title { max-width: 600px; margin: 0 auto 16px; }
+    .final-cta .section-subtitle {
+      margin: 0 auto 40px;
+      text-align: center;
+    }
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: #fff;
+      padding: 18px 44px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 18px;
+      transition: all 0.2s;
+      box-shadow: 0 0 50px rgba(255, 107, 43, 0.2);
+    }
+    .cta-button:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 0 70px rgba(255, 107, 43, 0.3);
+    }
+    .cta-subtext {
+      margin-top: 16px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    /* SCARCITY */
+    .scarcity-badge {
+      display: inline-block;
+      background: rgba(255, 107, 43, 0.08);
+      border: 1px solid rgba(255, 107, 43, 0.2);
+      color: var(--accent);
+      padding: 8px 20px;
+      border-radius: 100px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 32px;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 0;
+      text-align: center;
+    }
+    footer p {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+
+    /* ANIMATIONS */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .fade-in, .stack-card {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="container">
+      <div class="logo">The Website <span>Department</span></div>
+      <a href="#cta" class="nav-cta">Book a Call</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge">Built Exclusively for HVAC Companies</div>
+      <h1>Stop Losing Jobs to HVAC Companies With <em>Worse Service</em> and Better Websites</h1>
+      <p>The Jobs Booked System turns your online presence into a 24/7 booking machine -- so every missed call, every late-night search, and every "I'll call back later" becomes a job on your calendar.</p>
+      <a href="#stack" class="hero-cta">See How It Works &darr;</a>
+      <p class="hero-stat">70% of homeowners search for HVAC on their phone. If your site doesn't convert mobile visitors into booked jobs, you're paying for traffic that calls your competitor.</p>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section class="pain">
+    <div class="container">
+      <div class="section-label">The Problem</div>
+      <h2 class="section-title">You're Great at HVAC.<br>Your Website Isn't Great at Booking Jobs.</h2>
+      <div class="pain-grid">
+        <div class="pain-card fade-in">
+          <div class="pain-icon">&#128222;</div>
+          <h3>Missed Calls = Lost Revenue</h3>
+          <p>Your team can't answer every call. Nights, weekends, lunch breaks -- every missed call is a $3,000 to $15,000 job walking to your competitor. And they're not leaving voicemails. They're calling the next company on Google.</p>
+        </div>
+        <div class="pain-card fade-in">
+          <div class="pain-icon">&#128340;</div>
+          <h3>"We'll Follow Up" Never Happens</h3>
+          <p>You sent the quote. Then life happened. No follow-up at day 3. No check-in at day 7. The homeowner went with someone who stayed in front of them. Not because they were better. Because they showed up.</p>
+        </div>
+        <div class="pain-card fade-in">
+          <div class="pain-icon">&#128683;</div>
+          <h3>Your Website Looks Like 2016</h3>
+          <p>No online booking. No click-to-call. Slow on mobile. No reviews visible. No trust signals. Your service is top-tier but your online presence tells a different story. Homeowners judge in 3 seconds.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AGITATE -->
+  <section class="agitate">
+    <div class="container">
+      <div class="section-label">The Cost of Doing Nothing</div>
+      <h2 class="section-title">Every Week This Goes Unfixed, You're Leaving Money on the Table</h2>
+      <div class="big-number">$24K-$120K</div>
+      <div class="big-label">lost per month from missed calls and no follow-up</div>
+      <p class="body-text">If you miss 5 calls a week and just 2 would have been jobs, that's $6,000 to $30,000 per week you're not collecting. Not because your work isn't excellent. Because your systems aren't catching what your team can't.</p>
+      <p class="body-text" style="margin-top: 20px; font-weight: 600; color: var(--text);">Your competitors aren't better at HVAC. They're better at capturing demand online.</p>
+    </div>
+  </section>
+
+  <!-- SOLUTION -->
+  <section class="solution">
+    <div class="container">
+      <div class="section-label">The Solution</div>
+      <h2 class="section-title">The Jobs Booked System</h2>
+      <p class="section-subtitle" style="margin: 0 auto;">We don't build "websites." We build revenue systems designed specifically for HVAC companies. Every page, every automation, every follow-up sequence has one job: put more work on your calendar without adding to your plate.</p>
+    </div>
+  </section>
+
+  <!-- VALUE STACK -->
+  <section id="stack">
+    <div class="container">
+      <div class="section-label">Everything You Get</div>
+      <h2 class="section-title">The Complete System</h2>
+      <div class="stack-grid">
+
+        <div class="stack-card">
+          <div>
+            <div class="stack-label">Component 1</div>
+            <h3>High-Converting HVAC Website</h3>
+            <p>Custom-built for your brand. Mobile-first because that's where your customers are. Click-to-call on every page. Service area pages that rank in Google. Trust badges, review displays, before/after project galleries. A conversion machine built on frameworks proven across the HVAC industry.</p>
+          </div>
+          <div class="stack-value">
+            <div class="label">Value</div>
+            <div class="amount">$3,500</div>
+          </div>
+        </div>
+
+        <div class="stack-card">
+          <div>
+            <div class="stack-label">Component 2</div>
+            <h3>AI Voice Agent -- Never Miss Another Call</h3>
+            <p>An AI receptionist that picks up every call your team can't. Nights. Weekends. Lunch breaks. It answers professionally, captures the caller's information, qualifies the job type, and books it directly on your calendar. Your phone never goes to voicemail again.</p>
+          </div>
+          <div class="stack-value">
+            <div class="label">Value</div>
+            <div class="amount">$3,000</div>
+          </div>
+        </div>
+
+        <div class="stack-card">
+          <div>
+            <div class="stack-label">Component 3</div>
+            <h3>CRM + Lead Pipeline -- Every Lead Tracked</h3>
+            <p>Done-for-you CRM setup so every lead is visible from first contact to completed job. No more sticky notes. No more "did anyone call that person back?" You see the full picture -- who's waiting on a quote, who needs a follow-up, who's ready to book.</p>
+          </div>
+          <div class="stack-value">
+            <div class="label">Value</div>
+            <div class="amount">$2,500</div>
+          </div>
+        </div>
+
+        <div class="stack-card">
+          <div>
+            <div class="stack-label">Component 4</div>
+            <h3>Automated Follow-Up Sequences</h3>
+            <p>Quote sent but no response? The system follows up automatically at day 1, day 3, and day 7 via email and text. Past customer hasn't booked maintenance? Seasonal reminder. You stop chasing. The system chases for you, every time, without forgetting.</p>
+          </div>
+          <div class="stack-value">
+            <div class="label">Value</div>
+            <div class="amount">$2,000</div>
+          </div>
+        </div>
+
+        <div class="stack-card">
+          <div>
+            <div class="stack-label">Component 5</div>
+            <h3>Google Business Profile Optimization</h3>
+            <p>When someone searches "HVAC near me," you need to be in the top 3 map results. We fully optimize your Google Business Profile -- photos, service categories, descriptions, and a review strategy that builds your reputation on autopilot.</p>
+          </div>
+          <div class="stack-value">
+            <div class="label">Value</div>
+            <div class="amount">$1,500</div>
+          </div>
+        </div>
+
+        <div class="stack-card">
+          <div>
+            <div class="stack-label">Component 6</div>
+            <h3>90-Day SEO Content Plan</h3>
+            <p>A custom content roadmap targeting exactly what your customers type into Google: "AC repair [your city]," "furnace not turning on," "emergency HVAC service." You'll know what to publish, when to publish it, and why it brings in calls.</p>
+          </div>
+          <div class="stack-value">
+            <div class="label">Value</div>
+            <div class="amount">$1,500</div>
+          </div>
+        </div>
+
+        <div class="stack-card bonus">
+          <div>
+            <div class="stack-label">Bonus</div>
+            <h3>Online Booking Integration</h3>
+            <p>Homeowners book appointments directly from your website. No phone call required. Syncs with your calendar. Sends automatic confirmation texts. For the customer who wants to book at 11pm on a Tuesday -- you're open.</p>
+          </div>
+          <div class="stack-value">
+            <div class="label">Bonus Value</div>
+            <div class="amount" style="color: var(--green)">$1,000</div>
+          </div>
+        </div>
+
+        <div class="stack-card bonus">
+          <div>
+            <div class="stack-label">Bonus</div>
+            <h3>Review Generation System</h3>
+            <p>After every completed job, your customer gets an automated text asking for a Google review. More reviews = higher rankings = more calls. The cycle feeds itself.</p>
+          </div>
+          <div class="stack-value">
+            <div class="label">Bonus Value</div>
+            <div class="amount" style="color: var(--green)">$750</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing">
+    <div class="container">
+      <div class="section-label">The Investment</div>
+      <h2 class="section-title">One HVAC Job Pays for the Entire System</h2>
+      <div class="pricing-box">
+        <div class="pricing-total">
+          <span class="label">Total Value</span>
+          <span class="amount">$15,750</span>
+        </div>
+        <div class="pricing-actual">
+          <div class="label">Your Investment</div>
+          <div class="price"><span>$5,500</span></div>
+        </div>
+        <p class="pricing-monthly">+ $750/month for AI agent, system maintenance, and content</p>
+        <div class="pricing-bottom-line">Everything after the first booked job is profit.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUARANTEE -->
+  <section class="guarantee">
+    <div class="container">
+      <div class="guarantee-box fade-in">
+        <div class="guarantee-icon">&#128170;</div>
+        <h2>The Jobs Booked Guarantee</h2>
+        <p>Launch the full system. Keep it active for 90 days. If you haven't booked at least <span class="highlight">10 new jobs</span> through the system, I'll work with you for free until you do.</p>
+        <p>No fine print. No weasel words. If it doesn't book jobs, you don't pay for ongoing service until it does.</p>
+        <p style="margin-top: 20px; color: var(--text);">I can offer this because the system works. It's built on proven HVAC industry data -- the pages that convert, the follow-up timing that closes, the search terms that bring in ready-to-buy homeowners.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARISON -->
+  <section>
+    <div class="container">
+      <div class="section-label">Why This Is Different</div>
+      <h2 class="section-title">This Isn't a Website. It's a Revenue System.</h2>
+      <table class="comparison-table fade-in">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Typical Web Agency</th>
+            <th>Jobs Booked System</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>What you get</td>
+            <td>A pretty website</td>
+            <td>Full booking + follow-up engine</td>
+          </tr>
+          <tr>
+            <td>Missed calls</td>
+            <td>Still missed</td>
+            <td>AI agent catches every one</td>
+          </tr>
+          <tr>
+            <td>Follow-up</td>
+            <td>"We recommend you do that"</td>
+            <td>Automated -- runs without you</td>
+          </tr>
+          <tr>
+            <td>SEO</td>
+            <td>"We can add that for extra"</td>
+            <td>Built in from day one</td>
+          </tr>
+          <tr>
+            <td>Reviews</td>
+            <td>Not their problem</td>
+            <td>Automated review requests</td>
+          </tr>
+          <tr>
+            <td>HVAC-specific</td>
+            <td>Generic template</td>
+            <td>Built for your industry</td>
+          </tr>
+          <tr>
+            <td>Guarantee</td>
+            <td>None</td>
+            <td>10 jobs in 90 days or I work free</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- WHO IT'S FOR -->
+  <section>
+    <div class="container">
+      <div class="section-label">Is This For You?</div>
+      <h2 class="section-title">Built for HVAC Companies Tired of Losing Jobs They Should Be Winning</h2>
+      <div class="for-grid">
+        <div class="for-box yes fade-in">
+          <h3>This is for you if:</h3>
+          <ul>
+            <li>You're doing great work but your phone isn't ringing enough</li>
+            <li>You know you're losing calls after hours and on weekends</li>
+            <li>Your follow-up process is "when we remember"</li>
+            <li>You've paid for a website before and it didn't do anything</li>
+            <li>You're watching competitors with worse service outrank you on Google</li>
+            <li>You want a system that works while you're on the job site</li>
+          </ul>
+        </div>
+        <div class="for-box no fade-in">
+          <h3>This is NOT for you if:</h3>
+          <ul>
+            <li>You want the cheapest option (we're not that)</li>
+            <li>You're not ready to invest in growth</li>
+            <li>You want to "think about it" for 6 months</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta" id="cta">
+    <div class="container">
+      <div class="scarcity-badge">Only 3 New Clients Per Month</div>
+      <h2 class="section-title">Your Competitors Are Booking Jobs Right Now That Should Be Yours</h2>
+      <p class="section-subtitle" style="margin: 0 auto 40px; text-align: center;">Free 30-minute strategy call. We'll look at your current setup, show you where you're losing jobs, and map out exactly how the Jobs Booked System would work for your business.</p>
+      <a href="#" class="cta-button">Book Your Strategy Call &rarr;</a>
+      <p class="cta-subtext">No pressure. If it's not a fit, you'll still walk away knowing what to fix.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 <a href="#">The Website Department</a>. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- SCROLL ANIMATIONS -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in, .stack-card').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+{
+  "comfortLanguage": [
+    "cool air",
+    "warm house",
+    "comfortable home",
+    "right temperature",
+    "feels good in here",
+    "no more hot spots",
+    "even cooling",
+    "sleeping better",
+    "finally comfortable"
+  ],
+  "emergencyLanguage": [
+    "AC went out",
+    "no cold air",
+    "furnace stopped working",
+    "heat is not coming on",
+    "blowing warm air",
+    "weird noise from the unit",
+    "smells like burning",
+    "water leaking from AC",
+    "thermostat is blank",
+    "it just stopped"
+  ],
+  "trustLanguage": [
+    "honest",
+    "fair price",
+    "showed up on time",
+    "explained everything",
+    "did not try to upsell",
+    "fixed it fast",
+    "came the same day",
+    "did what they said they would",
+    "no hidden fees",
+    "stood behind their work"
+  ],
+  "technicalTermsHomeownersUse": [
+    "AC unit",
+    "furnace",
+    "thermostat",
+    "ductwork",
+    "air handler",
+    "compressor",
+    "refrigerant",
+    "Freon",
+    "heat pump",
+    "SEER rating",
+    "air filter",
+    "condensate drain",
+    "blower motor",
+    "capacitor",
+    "coils",
+    "tonnage",
+    "mini split",
+    "ductless",
+    "HVAC system",
+    "central air"
+  ],
+  "costAndFinancingLanguage": [
+    "how much does it cost",
+    "free estimate",
+    "financing available",
+    "monthly payments",
+    "affordable",
+    "fair pricing",
+    "no surprise charges",
+    "upfront pricing",
+    "written quote"
+  ],
+  "seasonalTriggers": {
+    "summer": ["AC not cooling", "hot in the house", "AC broke in the heat", "need AC fast"],
+    "winter": ["furnace not heating", "no heat", "heater stopped", "cold house", "pipes might freeze"],
+    "spring": ["AC tune-up", "get ready for summer", "spring maintenance"],
+    "fall": ["furnace tune-up", "heating check", "get ready for winter"]
+  },
+  "avoidTheseTerms": [
+    "leverage",
+    "synergize",
+    "robust",
+    "seamless",
+    "cutting-edge",
+    "game-changer",
+    "best-in-class",
+    "world-class",
+    "turnkey",
+    "disruptive"
+  ]
+}

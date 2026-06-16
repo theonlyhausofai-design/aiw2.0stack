@@ -1,0 +1,115 @@
+{
+  "version": 2,
+  "module": "engine_context_pasted",
+  "niche": "hvac",
+  "studentName": "Juanika Freeman",
+  "gates": {
+    "setup.complete": true,
+    "agency.brandLocked": true,
+    "m1.profileLocked": true,
+    "m2a.scoresLocked": true,
+    "m2b.researchComplete": true,
+    "m2c.nicheDecided": true,
+    "m2d.templateBuilt": true,
+    "m3.offerLocked": true,
+    "m4.factoryStructureLoaded": true,
+    "m5.factoryBriefLocked": true,
+    "factory.tailored": true,
+    "factory.deployed": false,
+    "m6.engineStructureLoaded": true,
+    "m7.engineBriefLocked": true,
+    "engine.deployed": true,
+    "engine.contextPasted": true,
+    "factory.generated": true
+  },
+  "credentials": {
+    "anthropic": true,
+    "apify": true,
+    "supabase": true,
+    "vercel": true,
+    "assemblyAi": true,
+    "github": true
+  },
+  "deployments": {
+    "factory": null,
+    "engine": "https://content-engine-black.vercel.app"
+  },
+  "factoryRuns": [],
+  "history": [
+    {
+      "timestamp": "2026-06-08T00:00:00.000Z",
+      "command": "/setup",
+      "outcome": "complete"
+    },
+    {
+      "timestamp": "2026-06-08T00:00:00.000Z",
+      "command": "/discovery",
+      "outcome": "complete"
+    },
+    {
+      "timestamp": "2026-06-08T00:00:00.000Z",
+      "command": "/setup-agency",
+      "outcome": "agency-brand.json written with 3 reviews, 3 client builds, 0 case studies"
+    },
+    {
+      "timestamp": "2026-06-08T00:00:00.000Z",
+      "command": "/score-niches",
+      "outcome": "complete -- top 3: HVAC (26), AI Automation (25), Med Spas (24)"
+    },
+    {
+      "timestamp": "2026-06-08T00:00:00.000Z",
+      "command": "/research",
+      "outcome": "complete -- 24 files across 3 niches (hvac, med-spas, ai-automation), 7 sub-tasks + synthesis each"
+    },
+    {
+      "timestamp": "2026-06-08T00:00:00.000Z",
+      "command": "/pick-niche",
+      "outcome": "complete -- chose HVAC with Jobs Booked System as recurring service layer"
+    },
+    {
+      "timestamp": "2026-06-08T00:00:00.000Z",
+      "command": "/build-niche-template",
+      "outcome": "complete -- 90 files generated at templates/hvac/ (16 components, 11 pages, 10 playbook JSON, 7 playbook MD, 8 SOPs, 8 agents, 2 checklists)"
+    },
+    {
+      "timestamp": "2026-06-08T00:00:00.000Z",
+      "command": "/craft-offer",
+      "outcome": "complete -- offer pack for HVAC with 3 DM versions and 5 personalized prospects"
+    },
+    {
+      "timestamp": "2026-06-08T00:00:00.000Z",
+      "command": "/load-factory-structure",
+      "outcome": "complete -- Website_Factory_Structure.md written to research/_structure/"
+    },
+    {
+      "timestamp": "2026-06-09T00:00:00.000Z",
+      "command": "/generate-wf-brief",
+      "outcome": "complete -- website-factory-brief.md written (template mode, 16 MISSING fields for per-client fill)"
+    },
+    {
+      "timestamp": "2026-06-09T00:00:00.000Z",
+      "command": "/load-engine-structure",
+      "outcome": "complete -- Content_Engine_Structure.md written (7 buckets, 5 features, Next.js + Supabase + Claude stack)"
+    },
+    {
+      "timestamp": "2026-06-09T00:00:00.000Z",
+      "command": "/generate-ce-brief",
+      "outcome": "complete -- content-engine-brief.md written with 4 pillars, 7-bucket paste map, 3 STUDENT TO POPULATE flags"
+    },
+    {
+      "timestamp": "2026-06-09T00:00:00.000Z",
+      "command": "/tailor-factory",
+      "outcome": "complete -- 3 files written: trust-signals.json (8 badges), CLAUDE.md (factory orientation), 05-copy-deck.md (voice lessons)"
+    },
+    {
+      "timestamp": "2026-06-09T00:00:00.000Z",
+      "command": "/deploy-engine",
+      "outcome": "complete -- deployed to https://content-engine-black.vercel.app, 6 migrations applied, 9 env vars set, smoke test passed (200 on /login)"
+    },
+    {
+      "timestamp": "2026-06-10T00:00:00.000Z",
+      "command": "/walk-engine",
+      "outcome": "complete -- 9 items across 5 buckets (instructions, expert_brain x5, video_ideas, context x2). my_voice and inspiration pending student input."
+    }
+  ]
+}

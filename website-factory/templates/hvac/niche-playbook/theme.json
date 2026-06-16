@@ -1,0 +1,93 @@
+{
+  "mode": "light",
+  "name": "hvac-professional",
+  "colors": {
+    "primary": {
+      "value": "#1B2A4A",
+      "name": "Navy",
+      "usage": "Headers, nav background, footer, primary buttons"
+    },
+    "primaryLight": {
+      "value": "#2C4066",
+      "name": "Navy Light",
+      "usage": "Hover states, secondary backgrounds"
+    },
+    "accent": {
+      "value": "#E86A2E",
+      "name": "Orange",
+      "usage": "CTAs, highlights, active states, trust chips"
+    },
+    "accentHover": {
+      "value": "#D45A1F",
+      "name": "Orange Dark",
+      "usage": "Button hover and pressed states"
+    },
+    "background": {
+      "value": "#FFFFFF",
+      "name": "White",
+      "usage": "Page background"
+    },
+    "surface": {
+      "value": "#F5F7FA",
+      "name": "Cool Gray",
+      "usage": "Card backgrounds, alternating sections"
+    },
+    "surfaceDark": {
+      "value": "#E8ECF1",
+      "name": "Gray Medium",
+      "usage": "Borders, dividers"
+    },
+    "text": {
+      "value": "#1A1A1A",
+      "name": "Near Black",
+      "usage": "Body text"
+    },
+    "textSecondary": {
+      "value": "#5A6577",
+      "name": "Slate",
+      "usage": "Captions, meta text, form labels"
+    },
+    "textOnPrimary": {
+      "value": "#FFFFFF",
+      "name": "White",
+      "usage": "Text on navy backgrounds"
+    },
+    "textOnAccent": {
+      "value": "#FFFFFF",
+      "name": "White",
+      "usage": "Text on orange buttons"
+    },
+    "success": {
+      "value": "#2E7D32",
+      "name": "Green",
+      "usage": "Form success, availability indicators"
+    },
+    "error": {
+      "value": "#C62828",
+      "name": "Red",
+      "usage": "Form errors, required field indicators"
+    }
+  },
+  "typography": {
+    "headingFamily": "'Inter', 'Helvetica Neue', Arial, sans-serif",
+    "bodyFamily": "'Inter', 'Helvetica Neue', Arial, sans-serif",
+    "headingWeight": 700,
+    "bodyWeight": 400,
+    "baseSize": "16px",
+    "lineHeight": 1.6,
+    "headingLineHeight": 1.2
+  },
+  "spacing": {
+    "sectionPadding": "80px",
+    "sectionPaddingMobile": "48px",
+    "containerMax": "1200px",
+    "cardPadding": "24px",
+    "cardRadius": "8px",
+    "buttonRadius": "6px"
+  },
+  "shadows": {
+    "card": "0 2px 8px rgba(0, 0, 0, 0.08)",
+    "cardHover": "0 4px 16px rgba(0, 0, 0, 0.12)",
+    "nav": "0 1px 4px rgba(0, 0, 0, 0.1)"
+  }
+}

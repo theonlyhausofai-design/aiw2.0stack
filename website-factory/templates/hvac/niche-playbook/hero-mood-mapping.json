@@ -1,0 +1,50 @@
+{
+  "mood": {
+    "primary": "professional",
+    "secondary": "trustworthy",
+    "tertiary": "reliable"
+  },
+  "emotionalTarget": "The homeowner is anxious about cost and competence. The hero must immediately communicate that this company is honest, capable, and will not waste their time or money.",
+  "subjectOptions": [
+    {
+      "id": "technician-at-work",
+      "description": "A uniformed HVAC technician working on equipment at a residential home. Clean uniform, visible name badge, professional posture.",
+      "priority": 1,
+      "suitableFor": ["homepage", "service-pages"]
+    },
+    {
+      "id": "comfortable-family",
+      "description": "A family relaxed at home in comfortable temperature. Natural expressions, not staged. Living room or kitchen setting.",
+      "priority": 2,
+      "suitableFor": ["homepage", "installation-pages"]
+    },
+    {
+      "id": "technician-with-homeowner",
+      "description": "A technician explaining something to a homeowner. Both standing near equipment. Technician pointing or showing clipboard. Trust and transparency moment.",
+      "priority": 3,
+      "suitableFor": ["about-page", "homepage-alternate"]
+    }
+  ],
+  "lighting": {
+    "style": "warm natural",
+    "temperature": "5500K to 6000K",
+    "direction": "Side or three-quarter front lighting. No harsh overhead.",
+    "notes": "Warm but not yellow. Clean and real. Avoid stock-photo fluorescent look."
+  },
+  "colorTones": {
+    "dominant": "Navy and warm neutrals",
+    "accents": "Orange highlights on uniform logo, equipment, or CTA overlay",
+    "avoid": "Oversaturated colors, neon, cold blue tones"
+  },
+  "composition": {
+    "layout": "Subject on one side, text overlay space on the other. 60/40 or 50/50 split.",
+    "focusPoint": "Subject's face or hands at work. Eyes should be visible when possible.",
+    "depth": "Shallow depth of field on background. Subject sharp.",
+    "overlay": "Dark gradient from text side (navy at 60-70% opacity) fading to transparent over the image."
+  },
+  "regionDefaults": {
+    "us-south": "Outdoor AC unit visible. Green lawn. Warm weather implied.",
+    "us-north": "Furnace or indoor setting. Winter coat on hook in background.",
+    "us-general": "Neutral residential exterior or interior. No extreme weather cues."
+  }
+}

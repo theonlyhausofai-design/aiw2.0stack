@@ -1,0 +1,26 @@
+{
+  "stepCount": 3,
+  "sectionHeader": "How It Works",
+  "sectionSubtext": "Getting your HVAC fixed is simple.",
+  "steps": [
+    {
+      "number": 1,
+      "title": "Call Us",
+      "description": "Call or fill out the form. We answer 24/7 and will schedule your appointment right away.",
+      "icon": "phone"
+    },
+    {
+      "number": 2,
+      "title": "We Diagnose",
+      "description": "A certified technician arrives on time, inspects your system, and explains exactly what is wrong and what it costs to fix. No surprises.",
+      "icon": "clipboard-check"
+    },
+    {
+      "number": 3,
+      "title": "We Fix It",
+      "description": "We complete the repair or installation. You get comfortable air and a written warranty on parts and labor.",
+      "icon": "check-circle"
+    }
+  ],
+  "closingLine": "Most repairs are completed the same day."
+}

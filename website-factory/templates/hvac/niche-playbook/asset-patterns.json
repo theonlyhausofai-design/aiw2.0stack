@@ -1,0 +1,72 @@
+{
+  "namingConvention": "{category}-{sequence}-{descriptor}.{ext}",
+  "sequenceFormat": "Two-digit zero-padded integer (01, 02, 03).",
+  "descriptorRules": "Lowercase, hyphen-separated, no spaces, no special characters. Descriptive but short.",
+  "examples": [
+    "hero-01-technician-at-condenser.webp",
+    "team-01-john-smith-headshot.webp",
+    "team-02-group-by-truck.webp",
+    "equipment-01-carrier-condenser.webp",
+    "completed-01-before-old-furnace.webp",
+    "completed-02-after-new-furnace.webp",
+    "trucks-01-branded-van-side.webp",
+    "office-01-storefront.webp"
+  ],
+  "categories": [
+    {
+      "id": "hero",
+      "directory": "assets/images/hero/",
+      "acceptedFormats": ["webp", "jpg", "png"]
+    },
+    {
+      "id": "team",
+      "directory": "assets/images/team/",
+      "acceptedFormats": ["webp", "jpg", "png"]
+    },
+    {
+      "id": "equipment",
+      "directory": "assets/images/equipment/",
+      "acceptedFormats": ["webp", "jpg", "png"]
+    },
+    {
+      "id": "completed",
+      "directory": "assets/images/completed-work/",
+      "acceptedFormats": ["webp", "jpg", "png"]
+    },
+    {
+      "id": "trucks",
+      "directory": "assets/images/trucks/",
+      "acceptedFormats": ["webp", "jpg", "png"]
+    },
+    {
+      "id": "office",
+      "directory": "assets/images/office/",
+      "acceptedFormats": ["webp", "jpg", "png"]
+    },
+    {
+      "id": "badges",
+      "directory": "assets/badges/",
+      "acceptedFormats": ["svg", "png"]
+    },
+    {
+      "id": "icons",
+      "directory": "assets/icons/",
+      "acceptedFormats": ["svg"]
+    },
+    {
+      "id": "logos",
+      "directory": "assets/logos/",
+      "acceptedFormats": ["svg", "png"],
+      "variants": ["full-color", "white", "dark", "favicon"]
+    }
+  ],
+  "optimization": {
+    "maxHeroWidth": 2400,
+    "maxContentWidth": 1200,
+    "maxThumbnailWidth": 400,
+    "jpegQuality": 82,
+    "webpQuality": 80,
+    "lazyLoad": true,
+    "lazyLoadExceptions": ["hero-01", "logo"]
+  }
+}

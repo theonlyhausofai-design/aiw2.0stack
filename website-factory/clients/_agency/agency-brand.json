@@ -1,0 +1,326 @@
+{
+  "$schemaVersion": 2,
+  "name": "The Website Dept",
+  "domain": "thewebsitedeptai.com",
+  "youtube_channel": "https://www.youtube.com/@juanikafreemanai",
+  "founder": {
+    "name": "Juanika Freeman",
+    "first_name": "Juanika",
+    "title": "Founder of The Website Dept",
+    "portrait_path": "assets/founder-portrait.jpg",
+    "portrait_caption": "Juanika, Founder of The Website Dept",
+    "signature_path": "assets/founder-signature.svg"
+  },
+  "owner_pronoun_subj": "she",
+  "niche": {
+    "noun": "hvac",
+    "noun_title": "HVAC",
+    "verb": "install and repair heating and cooling systems",
+    "end_customer": "homeowner"
+  },
+  "intro": {
+    "value_props": [
+      {
+        "strong": "100+",
+        "tail": "websites built"
+      },
+      {
+        "strong": "$100K",
+        "tail": "largest project delivered"
+      },
+      {
+        "strong": "25 years",
+        "tail": "in tech"
+      }
+    ],
+    "promise": "We build it right.",
+    "promise_strong": "If you don't make any money in 30 days, the next month is free while we figure out another gameplan."
+  },
+  "reviews": [
+    {
+      "name": "Khay",
+      "business": "Unboxed Travel",
+      "platform": "google",
+      "rating": 5.0,
+      "avatar_path": "assets/review-avatars/1.webp",
+      "text": "OneTechGirl knows what's up! The first thing she did was LISTEN\u2014really listen. That alone set the tone for a smooth, clear collaboration. She instantly understood my needs and aesthetics, then blended them with innovative, responsive design that created a seamless user experience. And don't even get me started on her clever humor\u2014our vibe was so on point, it felt like we'd known each other for years. She introduced me to AI-driven automation that's already saving me time and money. From smart websites to expertly crafted sales funnels to flawless Google My Business management\u2014this woman is the truth. I'm more confident now in running my business and giving my clients top-tier experiences, thanks to her. Honestly\u2026 at this point, I think she might be AI. She's a life saver for real. Thank you for your help, Boss!"
+    },
+    {
+      "name": "Lex",
+      "business": "ALT ATL LLC",
+      "platform": "google",
+      "rating": 5.0,
+      "avatar_path": "assets/review-avatars/2.webp",
+      "text": "OneTechGirl was the perfect option when deciding to build out our org's website. She was able to help with the end to end design and development in a way that really fit our vision and brand. The customer service has also been top tier. She has been extremely communicative when we've had questions or needed updates made to the site. We highly recommend OneTechGirl's services!"
+    },
+    {
+      "name": "Dionna Collins",
+      "business": "ComfiArt",
+      "platform": "google",
+      "rating": 5.0,
+      "avatar_path": "assets/review-avatars/3.webp",
+      "text": "The team at OneTechGirl demonstrated exceptional professionalism during our project, collaboratively guiding us through the web design process to create a seamlessly integrated funnel from conception to live activation. With their expertise in Google My Business Management and AI-powered automation, we're thrilled with the exceptional result and effortless user experience our new Smart Website provides."
+    }
+  ],
+  "review_total_count": 50,
+  "review_platforms_label": "Google",
+  "client_builds": [
+    {
+      "name": "Hubble Pets",
+      "url": "https://www.hubblepets.store/",
+      "screenshot_path": "assets/client-builds/1.webp",
+      "owner_quote": "OMG Sosa's breath use to be so stank, but after he started eating Hubble Bites he can now breathe.",
+      "owner_name": "Sasha Sanchez"
+    },
+    {
+      "name": "Honeybee-Technologies",
+      "url": "https://honeybee-technologies.com",
+      "screenshot_path": "assets/client-builds/2.webp",
+      "owner_quote": "Just make it so I don't have to do nothing!",
+      "owner_name": "Melissa"
+    },
+    {
+      "name": "Womans Haven",
+      "url": "https://womanshaven.com",
+      "screenshot_path": "assets/client-builds/3.webp",
+      "owner_quote": "Thank you for taking this big strain off of our plates. This nonprofit thanks you.",
+      "owner_name": "Tracy"
+    }
+  ],
+  "case_studies": [],
+  "proof": {
+    "stat": "1 website sold for $100K",
+    "stat_subtitle": "smart websites with growth systems installed",
+    "intro_paragraph": "The Website Dept., we build it right.",
+    "video_url": null,
+    "video_path": null,
+    "video_thumbnail_url": null,
+    "video_title": null,
+    "video_caption": "Watch the story"
+  },
+  "three_reasons": [
+    {
+      "title": "You don't pay if it doesn't work",
+      "body": "If you don't make money in 30 days, the next month is free while we figure out another gameplan. You carry zero risk."
+    },
+    {
+      "title": "You get $11,500+ in value for a fraction of the cost",
+      "body": "Custom website, AI lead handling, SEO foundation, booking automation, and nurture sequences -- all bundled into one system that pays for itself."
+    },
+    {
+      "title": "25 years of tech, built for your niche",
+      "body": "We don't build generic websites. We build smart websites with growth systems installed, specifically for med spas that need more patients in the chair."
+    }
+  ],
+  "winning_formula": {
+    "outcome_line": "More Leads Booked",
+    "traffic": {
+      "feature_card": {
+        "title": "SEO + AEO Architecture",
+        "tag": "SEO",
+        "meta": "Built to rank on Google and AI search",
+        "bullets": [
+          "Local SEO + service-area pages so your city finds you first",
+          "AI search optimization (AEO) so you show up in ChatGPT and Perplexity results",
+          "Schema markup and structured data that search engines actually read"
+        ],
+        "stat_num": "30%",
+        "stat_text": "<strong>Why this works:</strong> 30% more booked leads when patients find you first on Google and AI search",
+        "cta_label": "See how we rank you",
+        "cta_anchor": "#hero"
+      },
+      "audit_heading": "10 things we do on your SEO",
+      "audit_bullets": [
+        "Technical SEO audit and fix (crawl errors, broken links, sitemap)",
+        "Content quality review and optimization for search intent",
+        "On-page SEO (title tags, meta descriptions, headers, internal links)",
+        "Schema markup for local business, services, and reviews",
+        "Core Web Vitals and performance optimization",
+        "AI search readiness (AEO structured answers, FAQ schema)",
+        "Image optimization (compression, alt tags, lazy loading)",
+        "Google Business Profile optimization and sync",
+        "Service-area page buildout for local targeting",
+        "Monthly rank tracking and reporting"
+      ]
+    },
+    "trust": {
+      "cards": [
+        {
+          "title": "Real Google + Facebook reviews above the fold",
+          "tag": "TRUST",
+          "meta": "Social proof that builds instant credibility",
+          "bullets": [
+            "Verified reviews pulled live from Google and Facebook",
+            "Star ratings visible before they scroll",
+            "Social proof that builds instant credibility"
+          ],
+          "stat_num": "93%",
+          "stat_text": "<strong>Why this works:</strong> 93% of patients read reviews before booking",
+          "cta_label": "See the review wall",
+          "cta_anchor": "#hero",
+          "ai_highlight": false
+        },
+        {
+          "title": "Before and after galleries that sell the result",
+          "tag": "TRUST",
+          "meta": "Real patients, real results, real trust",
+          "bullets": [
+            "High-quality treatment photos organized by service",
+            "Real patients, real results, real trust",
+            "Gallery loads fast on mobile where most patients browse"
+          ],
+          "stat_num": "2x",
+          "stat_text": "<strong>Why this works:</strong> 2x more conversions when before/afters are above the fold",
+          "cta_label": "See the gallery",
+          "cta_anchor": "#hero",
+          "ai_highlight": false
+        },
+        {
+          "title": "Provider credentials and certifications front and center",
+          "tag": "TRUST",
+          "meta": "Licenses and training displayed prominently",
+          "bullets": [
+            "Licenses, certifications, and training displayed prominently",
+            "Team bios with real photos, not stock",
+            "Awards and affiliations that separate you from the competition"
+          ],
+          "stat_num": "78%",
+          "stat_text": "<strong>Why this works:</strong> 78% of patients check provider credentials before booking",
+          "cta_label": "See the credentials section",
+          "cta_anchor": "#hero",
+          "ai_highlight": false
+        }
+      ]
+    },
+    "conversion": {
+      "cards": [
+        {
+          "title": "AI-powered appointment booking that never sleeps",
+          "tag": "CONVERT",
+          "meta": "24/7 booking synced to your calendar",
+          "bullets": [
+            "24/7 online booking synced to your calendar",
+            "AI voice agent answers missed calls and books appointments",
+            "Automated reminders cut no-shows by 40%"
+          ],
+          "stat_num": "67%",
+          "stat_text": "<strong>Why this works:</strong> 67% of patients book outside business hours",
+          "cta_label": "See the booking system",
+          "cta_anchor": "#hero",
+          "ai_highlight": true
+        },
+        {
+          "title": "Lead nurture sequences that stop the leak",
+          "tag": "CONVERT",
+          "meta": "No lead goes cold",
+          "bullets": [
+            "Automated follow-up texts and emails within 60 seconds",
+            "Dormant database reactivation campaigns",
+            "No lead goes cold -- every inquiry gets touched 5+ times"
+          ],
+          "stat_num": "48%",
+          "stat_text": "<strong>Why this works:</strong> 48% of leads convert when followed up within 5 minutes",
+          "cta_label": "See the nurture flow",
+          "cta_anchor": "#hero",
+          "ai_highlight": false
+        },
+        {
+          "title": "One-click CTAs built for the decision moment",
+          "tag": "CONVERT",
+          "meta": "Zero friction between interest and booking",
+          "bullets": [
+            "Primary CTA above the fold on every page",
+            "Click-to-call, click-to-book, click-to-text -- zero friction",
+            "Exit-intent offers capture patients about to leave"
+          ],
+          "stat_num": "3x",
+          "stat_text": "<strong>Why this works:</strong> 3x more bookings with a single clear CTA vs. cluttered pages",
+          "cta_label": "See the CTA layout",
+          "cta_anchor": "#hero",
+          "ai_highlight": false
+        }
+      ]
+    }
+  },
+  "ai_infrastructure": {
+    "stack_name": "Jobs Booked System",
+    "platforms": [
+      "GoHighLevel",
+      "Make.com",
+      "OpenAI",
+      "Twilio",
+      "ElevenLabs"
+    ],
+    "details_html": "The Jobs Booked System connects your website, phone lines, and CRM into one automated pipeline. When a lead calls, fills out a form, or books online, the system captures them instantly, follows up with texts and emails, reactivates your dormant database, and books appointments to your calendar -- all without you lifting a finger. Missed calls get answered by an AI voice agent that sounds human and books on the spot."
+  },
+  "timeline": {
+    "headline": "Sign today, live in 3 days",
+    "days_to_live": 3,
+    "steps": [
+      {
+        "day": 1,
+        "title": "Strategy + Content",
+        "details": "Onboarding call, gather brand assets, photos, reviews, service details. Map out site structure, CTAs, and SEO keywords. Write all copy."
+      },
+      {
+        "day": 2,
+        "title": "Build + Integrate",
+        "details": "Full website build with Jobs Booked System installed. AI voice agent configured. Booking calendar, CRM, and nurture sequences wired up. Internal QA."
+      },
+      {
+        "day": 3,
+        "title": "Review + Launch",
+        "details": "You review the site, we make revisions, final QA, go live. Google Business Profile optimized. Dormant database reactivation campaign queued."
+      }
+    ]
+  },
+  "guarantee": {
+    "headline": "30-Day Money-Back Guarantee",
+    "details_html": "If your website and Jobs Booked System don't generate revenue within 30 days of launch, the next month of service is free while we rebuild your strategy. No questions, no hoops, no risk. We eat the cost until it works.",
+    "seal_path": "assets/guarantee-seal.png"
+  },
+  "pricing": {
+    "model": "Setup + monthly retainer",
+    "currency": "USD",
+    "setup_fee_price_display": "$2,997",
+    "setup_fee_standard_display": "$2,997",
+    "one_time_offer_price_display": "$1,997",
+    "monthly_fee_price_display": "$497/mo",
+    "stacked_value_total_display": "$11,500",
+    "value_stack": [
+      {
+        "name": "Smart Website Build",
+        "msrp": "$2,500"
+      },
+      {
+        "name": "Jobs Booked System (AI Voice + Booking)",
+        "msrp": "$3,000"
+      },
+      {
+        "name": "SEO + AEO Foundation",
+        "msrp": "$2,500"
+      },
+      {
+        "name": "Lead Nurture + CRM Setup",
+        "msrp": "$2,000"
+      },
+      {
+        "name": "Dormant Database Reactivation",
+        "msrp": "$1,500"
+      }
+    ],
+    "roi_defaults": {
+      "leads_per_month": 20,
+      "ticket_size_display": "$2,500",
+      "lift_display": "$15,000"
+    }
+  },
+  "palette": {
+    "primary": "#7C3AED",
+    "primary_deep": "#5B21B6",
+    "accent": "#D4AF37"
+  },
+  "sop_password": "LEAD",
+  "blueprint_pdf_path": null,
+  "blueprint_pdf_title": "Jobs Booked Playbook"
+}

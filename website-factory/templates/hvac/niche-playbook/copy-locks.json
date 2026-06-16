@@ -1,0 +1,22 @@
+{
+  "primaryCta": "Schedule Service Now",
+  "secondaryCta": "Call Now",
+  "formHeader": "Get Fast HVAC Service",
+  "formSubtext": "Fill out the form and we will call you within 15 minutes.",
+  "submitButton": "Request Service",
+  "privacyLine": "Your information is secure and never shared.",
+  "mobileCallLabel": "Tap to Call Now",
+  "availableNow": "Available 24/7",
+  "trustStripClaims": [
+    "Licensed and Insured",
+    "NATE Certified",
+    "Same-Day Service Available",
+    "100% Satisfaction Guaranteed"
+  ],
+  "heroTrustChips": [
+    "500+ Five-Star Reviews",
+    "NATE Certified Techs",
+    "Same-Day Service"
+  ],
+  "footerCta": "Need HVAC service? Call us now or schedule online."
+}
